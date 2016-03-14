@@ -1,1795 +1,325 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
   <head>
-    <meta name="description" content ="CS61A: Structure and Interpretation of Computer Programs" />
-    <meta name="keywords" content ="CS61A, Computer Science, CS, 61A, Programming, John DeNero, Berkeley, EECS" />
-    <meta name="author" content ="Paul Hilfinger, Cale Horeff, Chris Le, Eric Pai, Giorgia Willits, Haojun Li, James Uejio, Jason Lin, Jerry Chen, Jiang Long, Jongmin Jerome Baek, Jordon Wing, Kelly Liu, Kevin Chen, Kristin Stephens-Martinez, Kyle Liang, Kyle Raftogianis, Nicholas Ward, Owen Jow, Peter Xu, Raymond Chan, Rohit Lalchandani, Soumik Biswas, Stan Chu, Samantha Wathugala, Sumukh Sridhara, Tammy Nguyen, Tiffany Perumpail, Tim Greeno, Will Jiang" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name="viewport" content="width=device-width">
-
-    <script src="//cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
-    <script src="/assets/js/bootstrap.min.js"></script>
-
-    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
-    <link rel="icon" href="/assets/images/favicon.ico">
-
-    <link rel="stylesheet" href="/assets/css/mono-blue.css">
-    <script src="/assets/js/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-
-    
-
-    <title>CS 61A Spring 2016</title>
-
+    <meta charset="UTF-8">
+    <title>Data and Ethics</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">INFO 88 Data and Ethics</h1>
+      <h2 class="project-tagline">A Spring 2016 Data Science Connector Course </h2>
+      <h3>CCN: 41505 | Anna Lauren Hoffmann | Tuesday 3:30-5:30 PM | 210 South Hall | Units: 2</h3>
+      <a href="http://data8.org/" class="btn">Data8.org</a>
+      <a href="http://databears.berkeley.edu/" class="btn">Databears</a>
+      <a href="http://www.ischool.berkeley.edu/courses/i88a" class="btn">Course Page</a>
+      <a href="https://bcourses.berkeley.edu/courses/1412776" class="btn">bCourses</a>
+      <a href="page.html" class="btn">JLA</a>
 
-  <body id="index" class="home">
-    <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-section">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="/">CS 61A</a>
-        </div>
+    </section>
 
-        <div class="collapse navbar-collapse" id="navbar-collapse-section">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="/">Calendar</a></li>
-            <li><a href="https://piazza.com/class/ij5ddqc0arp6r4">Piazza</a></li>
-            <li><a href="/office-hours.html">Office Hours</a></li>
-            <!--- <li><a href="/tutoring.html">Tutoring</a></li> -->
-            <li><a href="/articles/using-ok.html">Using OK</a></li>
-            <li><a href="/articles/about.html">Syllabus</a></li>
+    <section class="main-content">
+      <h3>Welcome to INFO 88 Data and Ethics</h3>
+ 
 
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Course Info <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="/articles/resources.html">Resources</a></li>
-                <li><a href="/staff.html">Staff</a></li>
-                <li><a href="/weekly.html">Weekly Schedule</a></li>
-              </ul>
-            </li>
+<p>This course provides an introduction to critical and ethical issues surrounding data and society. It blends social and historical perspectives on data with ethics, policy, and case examples—from Facebook’s “Emotional Contagion” experiment to search engine algorithms to self-driving cars—to help students develop a workable understanding of current ethical issues in data science. Ethical and policy-related concepts addressed include: research ethics; privacy and surveillance; data and discrimination; and the “black box” of algorithms. Importantly, these issues will be addressed throughout the lifecycle of data—from collection to storage to analysis and application.</p>
 
-          </ul>
-        </div>
-      </div>
-    </nav>
+<h3>Course Objectives</h3>
+<p>Upon completion of the course, students will 1) identify and articulate some basic ethical and policy-based frameworks; 2) understand the relationship between data, ethics, and society; and 3) be able to critically assess their own work and education in the area of data science. In particular, course assignments will emphasize researcher and practitioner reflexivity, allowing students to explore their own social and ethical commitments as future data scientists and information professionals.</p>
 
-    <div id="content" class="container">
-      
 
-<div class='page-header'>
-  <h1><span class="content-title-brand">CS 61A</span>:
-  The Structure and Interpretation of Computer Programs</h1>
-
-  Spring 2016
-  <br/>
-  
-  Instructor:
-  
-  Paul Hilfinger
-  <br/>
-  MWF 2-3 in Wheeler Auditorium
-
-</div>
-
-
-<h2>Announcements</h2>
-
-<div id="assignment-quick-list">
-</div>
-
-<div id='announcements'>
-  
-    <div class="announcement" id='announcement-0'>
-        
-        <ul class="pager">
-            <li class='announcement-btn-newer'>
-                <a>
-                    <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
-                    newer
-                </a>
-            </li>
-            <li>
-                <span class="announcement-date">Wednesday, 03/09</span>
-            </li>
-            <li class='announcement-btn-older'>
-                <a>
-                    older
-                    <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
-                </a>
-            </li>
-        </ul>
-        
-        <ul>
-  <li><a href="hw/hw05/">Homework 5</a> has been released.</li>
-</ul>
-    </div>
-    
-
-    <div class="announcement" id='announcement-1'>
-        
-        <ul class="pager">
-            <li class='announcement-btn-newer'>
-                <a>
-                    <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
-                    newer
-                </a>
-            </li>
-            <li>
-                <span class="announcement-date">Friday, 03/04</span>
-            </li>
-            <li class='announcement-btn-older'>
-                <a>
-                    older
-                    <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
-                </a>
-            </li>
-        </ul>
-        
-        <ul>
-  <li><a href="proj/ants/">Ants</a> has been released. Submit one day early to get a bonus point!</li>
-  <li><a href="hw/hw04/">Homework 4</a> has been released.</li>
-  <li>Hog Composition revisions are now open. See Piazza for more information.</li>
-  <li>The <a href="proj/hog_contest/results">Hog contest results</a> are in! Congratulations to everybody that participated.</li>
-</ul>
-    </div>
-    
-
-    <div class="announcement" id='announcement-2'>
-        
-        <ul class="pager">
-            <li class='announcement-btn-newer'>
-                <a>
-                    <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
-                    newer
-                </a>
-            </li>
-            <li>
-                <span class="announcement-date">Thursday, 03/03</span>
-            </li>
-            <li class='announcement-btn-older'>
-                <a>
-                    older
-                    <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
-                </a>
-            </li>
-        </ul>
-        
-        <ul>
-  <li><a href="hw/hw04/">Homework 4</a> has been released.</li>
-  <li>Hog Composition revisions are now open. See Piazza for more information.</li>
-  <li>Ants will be released 3/4 and due on 3/17. Submit one day early to get a bonus point!</li>
-</ul>
-    </div>
-    
-
-    <div class="announcement" id='announcement-3'>
-        
-        <ul class="pager">
-            <li class='announcement-btn-newer'>
-                <a>
-                    <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
-                    newer
-                </a>
-            </li>
-            <li>
-                <span class="announcement-date">Monday, 02/22</span>
-            </li>
-            <li class='announcement-btn-older'>
-                <a>
-                    older
-                    <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
-                </a>
-            </li>
-        </ul>
-        
-        <ul>
-  <li>The <a href="proj/maps">Maps project</a> is due 3/1</li>
-  <li><a href="hw/hw03/">Homework 3</a> has been released</li>
-</ul>
-    </div>
-    
-
-    <div class="announcement" id='announcement-4'>
-        
-        <ul class="pager">
-            <li class='announcement-btn-newer'>
-                <a>
-                    <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
-                    newer
-                </a>
-            </li>
-            <li>
-                <span class="announcement-date">Monday, 02/08</span>
-            </li>
-            <li class='announcement-btn-older'>
-                <a>
-                    older
-                    <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
-                </a>
-            </li>
-        </ul>
-        
-        <ul>
-  <li>The schedule for office hours is available <a href="office-hours.html">here</a></li>
-  <li><a href="hw/hw02/">Homework 2</a> has been released.</li>
-  <li>Midterm 1 will be on Thursday 2/18</li>
-</ul>
-    </div>
-    
-
-    <div class="announcement" id='announcement-5'>
-        
-        <ul class="pager">
-            <li class='announcement-btn-newer'>
-                <a>
-                    <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
-                    newer
-                </a>
-            </li>
-            <li>
-                <span class="announcement-date">Monday, 01/25</span>
-            </li>
-            <li class='announcement-btn-older'>
-                <a>
-                    older
-                    <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
-                </a>
-            </li>
-        </ul>
-        
-        <ul>
-  <li>Register for an instructional account <a href="https://inst.eecs.berkeley.edu/~cs61a/admin-sp16/cgi-bin/calnet-auth.cgi">here</a></li>
-  <li>If you filled out a request to switch sections, it has been approved (unless you got an email otherwise)</li>
-  <li>The schedule for office hours is available <a href="office-hours.html">here</a></li>
-  <li>61A Partner Finding Mixer: Wednesday 1/27 3:30 Woz Lounge and Thursday 1/28 12:00 Woz Lounge</li>
-</ul>
-    </div>
-    
-
-    <div class="announcement" id='announcement-6'>
-        
-        <ul class="pager">
-            <li class='announcement-btn-newer'>
-                <a>
-                    <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
-                    newer
-                </a>
-            </li>
-            <li>
-                <span class="announcement-date">Wednesday, 01/20</span>
-            </li>
-            <li class='announcement-btn-older'>
-                <a>
-                    older
-                    <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
-                </a>
-            </li>
-        </ul>
-        
-        <ul>
-  <li>Register for an instructional account <a href="https://inst.eecs.berkeley.edu/~cs61a/admin-sp16/cgi-bin/calnet-auth.cgi">here</a></li>
-  <li>If you wish to change which lab/discussion you attend - fill out this <a href="https://docs.google.com/forms/d/1N4ytWhZhIGJWfZ81DxScviXkMw34C9rr_z3i9G2IPP4/viewform">form</a></li>
-</ul>
-    </div>
-    
-
-    <div class="announcement" id='announcement-7'>
-        
-        <ul class="pager">
-            <li class='announcement-btn-newer'>
-                <a>
-                    <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
-                    newer
-                </a>
-            </li>
-            <li>
-                <span class="announcement-date">Wednesday, 01/13</span>
-            </li>
-            <li class='announcement-btn-older'>
-                <a>
-                    older
-                    <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
-                </a>
-            </li>
-        </ul>
-        
-        <ul>
-  <li>Welcome to CS 61A!</li>
-  <li>Register for an instructional account <a href="https://inst.eecs.berkeley.edu/~cs61a/admin-sp16/cgi-bin/calnet-auth.cgi">here</a></li>
-</ul>
-    </div>
-    
-</div>
-
-<hr/>
-
-<div id='resources'>
-  <div id='resources-description'>
-    Resource/Piazza Search <br/>
-    <small>Search for terms like "recursion", "homework 3", or "practice"</small>
-  </div>
-
-  <div id='resources-input'>
-    <input type='text' id='resources-search-box' class='search' placeholder='Search for resources/posts on Piazza'>
-  </div>
-
-  <div id='resources-display'>
-    
-    <table id='resource-table' class="table table-hover">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Type</th>
-                <th>Tags</th>
-            </tr>
-        </thead>
-        <tbody class="list">
-            
-        <tr>
-            <td class='resource-name'>Midterm 1</td>
-            <td class='resource-type'>Exam</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'>Midterm 2</td>
-            <td class='resource-type'>Exam</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'>Final</td>
-            <td class='resource-type'>Exam</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'>Lecture 1: Functions
-(<a href="assets/slides/01_1pp.pdf">1pp</a>) (<a href="assets/slides/01_6pp.pdf">6pp</a>) (<a href="assets/slides/01.py">01.py</a>)</td>
-            <td class='resource-type'>Lecture</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="http://composingprograms.com/pages/11-getting-started.html">Readings: section 1.1</a></td>
-            <td class='resource-type'>Reading</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="http://composingprograms.com/pages/12-elements-of-programming.html">Readings: section 1.2</a></td>
-            <td class='resource-type'>Reading</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'>Lecture 2: Names
-(<a href="assets/slides/02_1pp.pdf">1pp</a>) (<a href="assets/slides/02_6pp.pdf">6pp</a>) (02.py)</td>
-            <td class='resource-type'>Lecture</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="http://composingprograms.com/pages/13-defining-new-functions.html">Readings: section 1.3</a></td>
-            <td class='resource-type'>Reading</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="http://composingprograms.com/pages/14-designing-functions.html">Readings: section 1.4</a></td>
-            <td class='resource-type'>Reading</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'>Lecture 3: Control
-(<a href="assets/slides/03_1pp.pdf">1pp</a>) (<a href="assets/slides/03_6pp.pdf">6pp</a>) (03.py)</td>
-            <td class='resource-type'>Lecture</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="http://composingprograms.com/pages/15-control.html">Readings: section 1.5</a></td>
-            <td class='resource-type'>Reading</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'>Lecture 4: Higher-Order Functions
-(<a href="assets/slides/04_1pp.pdf">1pp</a>) (<a href="assets/slides/04_6pp.pdf">6pp</a>) (<a href="assets/slides/04.py">04.py</a>)</td>
-            <td class='resource-type'>Lecture</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="http://composingprograms.com/pages/16-higher-order-functions.html">Readings: section 1.6</a></td>
-            <td class='resource-type'>Reading</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'>Lecture 5: Environments
-(<a href="assets/slides/05_1pp.pdf">1pp</a>) (<a href="assets/slides/05_6pp.pdf">6pp</a>) (05.py)</td>
-            <td class='resource-type'>Lecture</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="http://composingprograms.com/pages/16-higher-order-functions.html">Readings: section 1.6</a></td>
-            <td class='resource-type'>Reading</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'>Lecture 6: Recursion
-(<a href="assets/slides/06_1pp.pdf">1pp</a>) (<a href="assets/slides/06_6pp.pdf">6pp</a>) (<a href="assets/slides/06.py">06.py</a>)</td>
-            <td class='resource-type'>Lecture</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="http://composingprograms.com/pages/17-recursive-functions.html">Readings: section 1.7</a></td>
-            <td class='resource-type'>Reading</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'>Lecture 7: Tree Recursion
-(<a href="assets/slides/07_1pp.pdf">1pp</a>) (<a href="assets/slides/07_6pp.pdf">6pp</a>) (<a href="assets/slides/07.py">07.py</a>)</td>
-            <td class='resource-type'>Lecture</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="http://composingprograms.com/pages/17-recursive-functions.html">Readings: section 1.7</a></td>
-            <td class='resource-type'>Reading</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'>Lecture 8: Function Examples
-(<a href="assets/slides/08_1pp.pdf">1pp</a>) (<a href="assets/slides/08_6pp.pdf">6pp</a>)</td>
-            <td class='resource-type'>Lecture</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'>Lecture 9: Data Abstraction
-(<a href="assets/slides/09_1pp.pdf">1pp</a>) (<a href="assets/slides/09_6pp.pdf">6pp</a>) (09.py)</td>
-            <td class='resource-type'>Lecture</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="http://composingprograms.com/pages/21-introduction.html">Readings: section 2.1</a></td>
-            <td class='resource-type'>Reading</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="http://composingprograms.com/pages/22-data-abstraction.html">Readings: section 2.2</a></td>
-            <td class='resource-type'>Reading</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'>Lecture 10: Sequences
-(<a href="assets/slides/10_1pp.pdf">1pp</a>) (<a href="assets/slides/10_6pp.pdf">6pp</a>) (10.py)</td>
-            <td class='resource-type'>Lecture</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="http://composingprograms.com/pages/23-sequences.html">Readings: section 2.3</a></td>
-            <td class='resource-type'>Reading</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'>Lecture 11: Trees
-(<a href="assets/slides/11_1pp.pdf">1pp</a>) (<a href="assets/slides/11_6pp.pdf">6pp</a>) (<a href="assets/slides/11.py">11.py</a>)</td>
-            <td class='resource-type'>Lecture</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="http://composingprograms.com/pages/23-sequences.html">Readings: section 2.3</a></td>
-            <td class='resource-type'>Reading</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'>Lecture 12: Mutable Values
-(<a href="assets/slides/12_1pp.pdf">1pp</a>) (<a href="assets/slides/12_6pp.pdf">6pp</a>) (<a href="assets/slides/12.py">12.py</a>)</td>
-            <td class='resource-type'>Lecture</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="http://composingprograms.com/pages/24-mutable-data.html">Readings: section 2.4</a></td>
-            <td class='resource-type'>Reading</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'>Lecture 13: Mutable Functions
-(<a href="assets/slides/13_1pp.pdf">1pp</a>) (<a href="assets/slides/13_6pp.pdf">6pp</a>) (<a href="assets/slides/13.py">13.py</a>)</td>
-            <td class='resource-type'>Lecture</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="http://composingprograms.com/pages/24-mutable-data.html">Readings: section 2.4</a></td>
-            <td class='resource-type'>Reading</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'>Lecture 14: Objects
-(<a href="assets/slides/14_1pp.pdf">1pp</a>) (<a href="assets/slides/14_6pp.pdf">6pp</a>) (<a href="assets/slides/14.py">14.py</a>)</td>
-            <td class='resource-type'>Lecture</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="http://composingprograms.com/pages/25-object-oriented-programming.html">Readings: section 2.5</a></td>
-            <td class='resource-type'>Reading</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'>Lecture 15: Inheritance
-(<a href="assets/slides/15_1pp.pdf">1pp</a>) (<a href="assets/slides/15_6pp.pdf">6pp</a>) (<a href="assets/slides/15.py">15.py</a>)</td>
-            <td class='resource-type'>Lecture</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="http://composingprograms.com/pages/25-object-oriented-programming.html">Readings: section 2.5</a></td>
-            <td class='resource-type'>Reading</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'>Lecture 16: Expressivness
-(<a href="assets/slides/16_1pp.pdf">1pp</a>) (<a href="assets/slides/16_6pp.pdf">6pp</a>) (<a href="assets/slides/16.py">16.py</a>)</td>
-            <td class='resource-type'>Lecture</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="http://composingprograms.com/pages/27-object-abstraction.html">Readings: section 2.7</a></td>
-            <td class='resource-type'>Reading</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'>Lecture 17: Iterators
-(<a href="assets/slides/17_1pp.pdf">1pp</a>) (<a href="assets/slides/17_6pp.pdf">6pp</a>) (<a href="assets/slides/17.py">17.py</a>)</td>
-            <td class='resource-type'>Lecture</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="http://composingprograms.com/pages/29-recursive-objects.html">Readings: section 2.9</a></td>
-            <td class='resource-type'>Reading</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'>Lecture 18: Hierarchy
-(<a href="assets/slides/18_1pp.pdf">1pp</a>) (<a href="assets/slides/18_6pp.pdf">6pp</a>) (<a href="assets/slides/18.py">18.py</a>)</td>
-            <td class='resource-type'>Lecture</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="http://composingprograms.com/pages/29-recursive-objects.html">Readings: section 2.9</a></td>
-            <td class='resource-type'>Reading</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'>Lecture 19: Growth I
-(<a href="assets/slides/19_1pp.pdf">1pp</a>) (<a href="assets/slides/19_6pp.pdf">6pp</a>) (19.py)</td>
-            <td class='resource-type'>Lecture</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="http://composingprograms.com/pages/28-efficiency.html">Readings: section 2.8</a></td>
-            <td class='resource-type'>Reading</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'>Lecture 20: Growth II
-(<a href="assets/slides/20_1pp.pdf">1pp</a>) (<a href="assets/slides/20_6pp.pdf">6pp</a>) (20.py)</td>
-            <td class='resource-type'>Lecture</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="http://composingprograms.com/pages/28-efficiency.html">Readings: section 2.8</a></td>
-            <td class='resource-type'>Reading</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'>Lecture 21: Sets
-(<a href="assets/slides/21_1pp.pdf">1pp</a>) (<a href="assets/slides/21_6pp.pdf">6pp</a>) (<a href="assets/slides/21.py">21.py</a>)</td>
-            <td class='resource-type'>Lecture</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="http://composingprograms.com/pages/29-recursive-objects.html">Readings: section 2.9</a></td>
-            <td class='resource-type'>Reading</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'>Lecture 22: Data Examples
-(<a href="assets/slides/22_1pp.pdf">1pp</a>) (<a href="assets/slides/22_6pp.pdf">6pp</a>) (<a href="assets/slides/22.py">22.py</a>)</td>
-            <td class='resource-type'>Lecture</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'>Lecture 23: Scheme
-(1pp) (6pp) (23.scm)</td>
-            <td class='resource-type'>Lecture</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="http://composingprograms.com/pages/31-introduction.html">Readings: section 3.1</a></td>
-            <td class='resource-type'>Reading</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="http://composingprograms.com/pages/32-functional-programming.html">Readings: section 3.2</a></td>
-            <td class='resource-type'>Reading</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'>Lecture 24: Exceptions
-(1pp) (6pp) (24.py)</td>
-            <td class='resource-type'>Lecture</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="http://composingprograms.com/pages/33-exceptions.html">Readings: section 3.3</a></td>
-            <td class='resource-type'>Reading</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'>Lecture 25: Calculator
-(1pp) (6pp) (25.scm)</td>
-            <td class='resource-type'>Lecture</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="http://composingprograms.com/pages/34-interpreters-for-languages-with-combination.html">Readings: section 3.4</a></td>
-            <td class='resource-type'>Reading</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'>Lecture 26: Interpreters
-(1pp) (6pp)</td>
-            <td class='resource-type'>Lecture</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="http://composingprograms.com/pages/35-interpreters-for-languages-with-abstraction.html">Readings: section 3.5</a></td>
-            <td class='resource-type'>Reading</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'>Lecture 27: Tail Calls
-(1pp) (6pp) (27.scm)</td>
-            <td class='resource-type'>Lecture</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="http://composingprograms.com/pages/35-interpreters-for-languages-with-abstraction.html">Readings: section 3.5</a></td>
-            <td class='resource-type'>Reading</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'>Lecture 28: Iterators
-(1pp) (6pp) (28.py)</td>
-            <td class='resource-type'>Lecture</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="http://composingprograms.com/pages/42-implicit-sequences.html">Readings: section 4.2</a></td>
-            <td class='resource-type'>Reading</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'>Lecture 29: The Halting Problem
-(1pp) (6pp)</td>
-            <td class='resource-type'>Lecture</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'>Lecture 30: Streams
-(1pp) (6pp) (30.scm)</td>
-            <td class='resource-type'>Lecture</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="http://composingprograms.com/pages/42-implicit-sequences.html">Readings: section 4.2</a></td>
-            <td class='resource-type'>Reading</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'>Lecture 31: Declarative Programming
-(1pp) (6pp) (31.sql)</td>
-            <td class='resource-type'>Lecture</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="http://composingprograms.com/pages/43-declarative-programming.html">Readings: section 4.3</a></td>
-            <td class='resource-type'>Reading</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'>Lecture 32: Tables
-(1pp) (6pp) (32.sql)</td>
-            <td class='resource-type'>Lecture</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="http://composingprograms.com/pages/43-declarative-programming.html">Readings: section 4.3</a></td>
-            <td class='resource-type'>Reading</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'>Lecture 33: Recursive Select
-(1pp) (6pp) (33.sql)</td>
-            <td class='resource-type'>Lecture</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="http://composingprograms.com/pages/43-declarative-programming.html">Readings: section 4.3</a></td>
-            <td class='resource-type'>Reading</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'>Lecture 34: Aggregation
-(1pp) (6pp) (34.sql)</td>
-            <td class='resource-type'>Lecture</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="http://composingprograms.com/pages/43-declarative-programming.html">Readings: section 4.3</a></td>
-            <td class='resource-type'>Reading</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'>Lecture 35: Distributed Data
-(1pp) (6pp)</td>
-            <td class='resource-type'>Lecture</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'>Lecture 36: Concurrency
-(1pp) (6pp)</td>
-            <td class='resource-type'>Lecture</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'>Lecture 37: Review
-(1pp) (6pp)</td>
-            <td class='resource-type'>Lecture</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'>Lecture 38: Conclusion
-(1pp) (6pp)</td>
-            <td class='resource-type'>Lecture</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="hw/hw01/">Homework 1</a> (<a href="hw/sol-hw01/">Solutions</a>)</td>
-            <td class='resource-type'>Homework</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="hw/hw02/">Homework 2</a> (<a href="hw/sol-hw02/">Solutions</a>)</td>
-            <td class='resource-type'>Homework</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="hw/hw03/">Homework 3</a> (<a href="hw/sol-hw03/">Solutions</a>)</td>
-            <td class='resource-type'>Homework</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="hw/hw04/">Homework 4</a> (<a href="hw/sol-hw04/">Solutions</a>)</td>
-            <td class='resource-type'>Homework</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="hw/hw05/">Homework 5</a></td>
-            <td class='resource-type'>Homework</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="proj/hog/">Hog</a></td>
-            <td class='resource-type'>Project</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="proj/hog_contest/">Hog Contest</a></td>
-            <td class='resource-type'>Project</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="proj/maps/">Maps</a></td>
-            <td class='resource-type'>Project</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'>Hog Composition Revision</td>
-            <td class='resource-type'>Project</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="proj/ants/">Ants</a></td>
-            <td class='resource-type'>Project</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'>Scheme</td>
-            <td class='resource-type'>Project</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="lab/lab00/">Lab 0: Workflow</a></td>
-            <td class='resource-type'>Lab</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="lab/lab01/">Lab 1: Expressions and Control</a></td>
-            <td class='resource-type'>Lab</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="lab/lab02/">Lab 2: Higher Order Functions, Recursion and Lambdas</a></td>
-            <td class='resource-type'>Lab</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="lab/lab03/">Lab 3: Data Abstraction and Recursion/Lambdas Review</a></td>
-            <td class='resource-type'>Lab</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="lab/lab04/">Lab 4: Lists and Linked Lists</a></td>
-            <td class='resource-type'>Lab</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="lab/lab05/">Lab 5: Mutable Lists, Dictionaries and Trees</a></td>
-            <td class='resource-type'>Lab</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="lab/lab06/">Lab 6: Nonlocal and Object-Oriented Programming</a></td>
-            <td class='resource-type'>Lab</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="lab/lab07/">Lab 7: Recursive Objects</a></td>
-            <td class='resource-type'>Lab</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="disc/disc00.pdf">Discussion 0: Lost on the Moon</a> (<a href="disc/disc00_sol.pdf">Solutions</a>)</td>
-            <td class='resource-type'>Discussion</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="disc/disc01.pdf">Discussion 1: Control and Higher Order Functions</a> (<a href="disc/disc01_sol.pdf">Solutions</a>)</td>
-            <td class='resource-type'>Discussion</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="disc/disc02.pdf">Discussion 2: Environment Diagrams and Recursion</a> (<a href="disc/disc02_sol.pdf">Solutions</a>)</td>
-            <td class='resource-type'>Discussion</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="disc/disc03.pdf">Discussion 3: Data Abstraction and Sequences</a> (<a href="disc/disc03_sol.pdf">Solutions</a>)</td>
-            <td class='resource-type'>Discussion</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'>Discussion 4: Midterm 1 Review</td>
-            <td class='resource-type'>Discussion</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="disc/disc05.pdf">Discussion 5: Trees and Mutation</a> (<a href="disc/disc05_sol.pdf">Solutions</a>)</td>
-            <td class='resource-type'>Discussion</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="disc/disc06.pdf">Discussion 6: Inheritance and Nonlocal</a> (<a href="disc/disc06_sol.pdf">Solutions</a>)</td>
-            <td class='resource-type'>Discussion</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="disc/disc07.pdf">Discussion 7: Orders of Growth</a> (<a href="disc/disc07_sol.pdf">Solutions</a>)</td>
-            <td class='resource-type'>Discussion</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="articles/about.html">Syllabus</a></td>
-            <td class='resource-type'>Article</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="articles/composition.html">Composition Guide</a></td>
-            <td class='resource-type'>Article</td>
-            <td class='resource-tags'>Programming</td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="articles/debugging.html">Debugging Guide</a></td>
-            <td class='resource-type'>Article</td>
-            <td class='resource-tags'>Programming</td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="articles/using-ok.html">Using OK</a></td>
-            <td class='resource-type'>Article</td>
-            <td class='resource-tags'>OK</td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="articles/unix.html">UNIX Tutorial</a></td>
-            <td class='resource-type'>Article</td>
-            <td class='resource-tags'>UNIX</td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="articles/sublime.html">Sublime Text</a></td>
-            <td class='resource-type'>Article</td>
-            <td class='resource-tags'>Text Editors</td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="articles/vim.html">Vim</a></td>
-            <td class='resource-type'>Article</td>
-            <td class='resource-tags'>Text Editors</td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="articles/emacs.html">Emacs</a></td>
-            <td class='resource-type'>Article</td>
-            <td class='resource-tags'>Text Editors</td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'>Weekly Schedule</td>
-            <td class='resource-type'>Article</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'>Staff</td>
-            <td class='resource-type'>Article</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'>Office Hours</td>
-            <td class='resource-type'>Article</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="http://www.youtube.com/watch?v=54-wuFsPi0w">Windows: set up Python</a></td>
-            <td class='resource-type'>Article</td>
-            <td class='resource-tags'>Setting up</td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="http://www.youtube.com/watch?v=gDDaz6Sb8jo">Windows: connecting from home (video)</a></td>
-            <td class='resource-type'>Article</td>
-            <td class='resource-tags'>Setting up</td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="http://inst.eecs.berkeley.edu/~cs61a/fa13/pdfs/connect-windows.pdf">Windows: connecting form home (pdf)</a></td>
-            <td class='resource-type'>Article</td>
-            <td class='resource-tags'>Setting up</td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="http://www.youtube.com/watch?v=smHuBHxJdK8">Mac: set up Python</a></td>
-            <td class='resource-type'>Article</td>
-            <td class='resource-tags'>Setting up</td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="http://www.youtube.com/watch?v=6tQx-J4nBSY">Mac: set up Emacs</a></td>
-            <td class='resource-type'>Article</td>
-            <td class='resource-tags'>Setting up</td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="http://www.youtube.com/watch?v=irwlU7esODA">Mac: connecting from home (video)</a></td>
-            <td class='resource-type'>Article</td>
-            <td class='resource-tags'>Setting up</td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="http://inst.eecs.berkeley.edu/~cs61a/fa13/pdfs/connect-mac.pdf">Mac: connecting from home (pdf)</a></td>
-            <td class='resource-type'>Article</td>
-            <td class='resource-tags'>Setting up</td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="http://tutor.composingprograms.com/visualize.html">Online Python tutor</a></td>
-            <td class='resource-type'>Article</td>
-            <td class='resource-tags'>Environment Diagrams</td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="https://www.youtube.com/user/papajohnno/search?query=61A+Fall+2015+Lecture">Fall 2015 screencasts</a></td>
-            <td class='resource-type'>Article</td>
-            <td class='resource-tags'>Video, John DeNero</td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="https://www.youtube.com/playlist?list=PL-XXv-cvA_iBM29DgZsGaQihJp8lLQn3J">Spring 2015 screencasts</a></td>
-            <td class='resource-type'>Article</td>
-            <td class='resource-tags'>Video, John DeNero</td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="https://www.youtube.com/playlist?list=PL-XXv-cvA_iDbsAvTYyJnMkObr12IIkyg">Fall 2014 screencasts</a></td>
-            <td class='resource-type'>Article</td>
-            <td class='resource-tags'>Video, John DeNero</td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="http://www.youtube.com/view_play_list?p=-XXv-cvA_iCIEwJhyDVdyLMCiimv6Tup">Fall 2013 screencasts</a></td>
-            <td class='resource-type'>Article</td>
-            <td class='resource-tags'>Video, John DeNero</td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="http://www.ee.surrey.ac.uk/Teaching/Unix/">Another UNIX tutorial</a></td>
-            <td class='resource-type'>Article</td>
-            <td class='resource-tags'>UNIX</td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="http://albertwu.org/cs61a/">Albert Wu's practice problems</a></td>
-            <td class='resource-type'>Practice</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'><a href="http://markmiyashita.com/cs61a/sp14/practice/">Mark Miyashita's practice problems</a></td>
-            <td class='resource-type'>Practice</td>
-            <td class='resource-tags'></td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'>Functions and expressions practice problems</td>
-            <td class='resource-type'>Practice</td>
-            <td class='resource-tags'>Functions</td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'>Control structures practice problems</td>
-            <td class='resource-type'>Practice</td>
-            <td class='resource-tags'>Control Structures</td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'>Higher Order Functions practice problems</td>
-            <td class='resource-type'>Practice</td>
-            <td class='resource-tags'>Higher Order Functions</td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'>Lambda expressions practice problems</td>
-            <td class='resource-type'>Practice</td>
-            <td class='resource-tags'>Lambdas</td>
-        </tr>
-
-        <tr>
-            <td class='resource-name'>Recursion practice problems</td>
-            <td class='resource-type'>Practice</td>
-            <td class='resource-tags'>Recursion, Tree Recursion</td>
-        </tr>
-        </tbody>
-    </table>
-  </div>
-</div>
-
-<div>
-  <h2>Calendar</h2>
-
-  <div class="table-responsive">
-
-  <table id="calendar">
-<tr>
-<th>Week</th>
-<th>Date</th>
-<th>Lecture</th>
-<th>Reading</th>
-<th>Handout</th>
-<th>Homework</th>
-<th>Project</th>
-</tr>
-<tr>
-<td rowspan="2" class="weeknum odd">1</td>
-<td>Wed 1/20</td>
-<td>Functions
-<br/>
-(<a href="assets/slides/01_1pp.pdf">1pp</a>) (<a href="assets/slides/01_6pp.pdf">6pp</a>) (<a href="assets/slides/01.py">01.py</a>)</td>
-<td><a href="http://composingprograms.com/pages/11-getting-started.html">1.1</a><br/>
-<a href="http://composingprograms.com/pages/12-elements-of-programming.html">1.2</a></td>
-<td><a href="lab/lab00/">Lab 0: Workflow</a><br/>(due Fri 1/22)</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Fri 1/22</td>
-<td>Names
-<br/>
-(<a href="assets/slides/02_1pp.pdf">1pp</a>) (<a href="assets/slides/02_6pp.pdf">6pp</a>) (02.py)</td>
-<td><a href="http://composingprograms.com/pages/13-defining-new-functions.html">1.3</a><br/>
-<a href="http://composingprograms.com/pages/14-designing-functions.html">1.4</a></td>
-<td><a href="disc/disc00.pdf">Discussion 0: Lost on the Moon</a> (<a href="disc/disc00_sol.pdf">Solutions</a>)</td>
-<td><a href="hw/hw01/">Homework 1</a><br/>(due Wed 1/27) (<a href="hw/sol-hw01/">Solutions</a>)</td>
-<td></td>
-</tr>
-<tr>
-<td rowspan="3" class="weeknum even">2</td>
-<td>Mon 1/25</td>
-<td>Control
-<br/>
-(<a href="assets/slides/03_1pp.pdf">1pp</a>) (<a href="assets/slides/03_6pp.pdf">6pp</a>) (03.py)</td>
-<td><a href="http://composingprograms.com/pages/15-control.html">1.5</a></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Wed 1/27</td>
-<td>Higher-Order Functions
-<br/>
-(<a href="assets/slides/04_1pp.pdf">1pp</a>) (<a href="assets/slides/04_6pp.pdf">6pp</a>) (<a href="assets/slides/04.py">04.py</a>)</td>
-<td><a href="http://composingprograms.com/pages/16-higher-order-functions.html">1.6</a></td>
-<td><a href="lab/lab01/">Lab 1: Expressions and Control</a><br/>(due Fri 1/29)</td>
-<td></td>
-<td><a href="proj/hog/">Hog</a><br/>(due Thu 2/4)</td>
-</tr>
-<tr>
-<td>Fri 1/29</td>
-<td>Environments
-<br/>
-(<a href="assets/slides/05_1pp.pdf">1pp</a>) (<a href="assets/slides/05_6pp.pdf">6pp</a>) (05.py)</td>
-<td><a href="http://composingprograms.com/pages/16-higher-order-functions.html">1.6</a></td>
-<td><a href="disc/disc01.pdf">Discussion 1: Control and Higher Order Functions</a> (<a href="disc/disc01_sol.pdf">Solutions</a>)</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td rowspan="3" class="weeknum odd">3</td>
-<td>Mon 2/1</td>
-<td>Recursion
-<br/>
-(<a href="assets/slides/06_1pp.pdf">1pp</a>) (<a href="assets/slides/06_6pp.pdf">6pp</a>) (<a href="assets/slides/06.py">06.py</a>)</td>
-<td><a href="http://composingprograms.com/pages/17-recursive-functions.html">1.7</a></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Wed 2/3</td>
-<td>Tree Recursion
-<br/>
-(<a href="assets/slides/07_1pp.pdf">1pp</a>) (<a href="assets/slides/07_6pp.pdf">6pp</a>) (<a href="assets/slides/07.py">07.py</a>)</td>
-<td><a href="http://composingprograms.com/pages/17-recursive-functions.html">1.7</a></td>
-<td><a href="lab/lab02/">Lab 2: Higher Order Functions, Recursion and Lambdas</a><br/>(due Fri 2/5)</td>
-<td></td>
-<td><a href="proj/hog_contest/">Hog Contest</a><br/>(due Mon 2/15)</td>
-</tr>
-<tr>
-<td>Fri 2/5</td>
-<td>Function Examples
-<br/>
-(<a href="assets/slides/08_1pp.pdf">1pp</a>) (<a href="assets/slides/08_6pp.pdf">6pp</a>)</td>
-<td></td>
-<td><a href="disc/disc02.pdf">Discussion 2: Environment Diagrams and Recursion</a> (<a href="disc/disc02_sol.pdf">Solutions</a>)</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td rowspan="3" class="weeknum even">4</td>
-<td>Mon 2/8</td>
-<td>Data Abstraction
-<br/>
-(<a href="assets/slides/09_1pp.pdf">1pp</a>) (<a href="assets/slides/09_6pp.pdf">6pp</a>) (09.py)</td>
-<td><a href="http://composingprograms.com/pages/21-introduction.html">2.1</a><br/>
-<a href="http://composingprograms.com/pages/22-data-abstraction.html">2.2</a></td>
-<td></td>
-<td><a href="hw/hw02/">Homework 2</a><br/>(due Tue 2/16) (<a href="hw/sol-hw02/">Solutions</a>)</td>
-<td></td>
-</tr>
-<tr>
-<td>Wed 2/10</td>
-<td>Sequences
-<br/>
-(<a href="assets/slides/10_1pp.pdf">1pp</a>) (<a href="assets/slides/10_6pp.pdf">6pp</a>) (10.py)</td>
-<td><a href="http://composingprograms.com/pages/23-sequences.html">2.3</a></td>
-<td><a href="lab/lab03/">Lab 3: Data Abstraction and Recursion/Lambdas Review</a><br/>(due Fri 2/12)</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Fri 2/12</td>
-<td>Trees
-<br/>
-(<a href="assets/slides/11_1pp.pdf">1pp</a>) (<a href="assets/slides/11_6pp.pdf">6pp</a>) (<a href="assets/slides/11.py">11.py</a>)</td>
-<td><a href="http://composingprograms.com/pages/23-sequences.html">2.3</a></td>
-<td><a href="disc/disc03.pdf">Discussion 3: Data Abstraction and Sequences</a> (<a href="disc/disc03_sol.pdf">Solutions</a>)</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td rowspan="4" class="weeknum odd">5</td>
-<td>Mon 2/15</td>
-<td>No Lecture: President's Day</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Wed 2/17</td>
-<td>Mutable Values
-<br/>
-(<a href="assets/slides/12_1pp.pdf">1pp</a>) (<a href="assets/slides/12_6pp.pdf">6pp</a>) (<a href="assets/slides/12.py">12.py</a>)</td>
-<td><a href="http://composingprograms.com/pages/24-mutable-data.html">2.4</a></td>
-<td><a href="lab/lab04/">Lab 4: Lists and Linked Lists</a><br/>(due Mon 2/22)</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Thu 2/18</td>
-<td>Midterm 1</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Fri 2/19</td>
-<td>Mutable Functions
-<br/>
-(<a href="assets/slides/13_1pp.pdf">1pp</a>) (<a href="assets/slides/13_6pp.pdf">6pp</a>) (<a href="assets/slides/13.py">13.py</a>)</td>
-<td><a href="http://composingprograms.com/pages/24-mutable-data.html">2.4</a></td>
-<td>Discussion 4: Midterm 1 Review</td>
-<td><a href="hw/hw03/">Homework 3</a><br/>(due Fri 2/26) (<a href="hw/sol-hw03/">Solutions</a>)</td>
-<td><a href="proj/maps/">Maps</a><br/>(due Tue 3/1)</td>
-</tr>
-<tr>
-<td rowspan="3" class="weeknum even">6</td>
-<td>Mon 2/22</td>
-<td>Objects
-<br/>
-(<a href="assets/slides/14_1pp.pdf">1pp</a>) (<a href="assets/slides/14_6pp.pdf">6pp</a>) (<a href="assets/slides/14.py">14.py</a>)</td>
-<td><a href="http://composingprograms.com/pages/25-object-oriented-programming.html">2.5</a></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Wed 2/24</td>
-<td>Inheritance
-<br/>
-(<a href="assets/slides/15_1pp.pdf">1pp</a>) (<a href="assets/slides/15_6pp.pdf">6pp</a>) (<a href="assets/slides/15.py">15.py</a>)</td>
-<td><a href="http://composingprograms.com/pages/25-object-oriented-programming.html">2.5</a></td>
-<td><a href="lab/lab05/">Lab 5: Mutable Lists, Dictionaries and Trees</a><br/>(due Fri 2/26)</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Fri 2/26</td>
-<td>Expressivness
-<br/>
-(<a href="assets/slides/16_1pp.pdf">1pp</a>) (<a href="assets/slides/16_6pp.pdf">6pp</a>) (<a href="assets/slides/16.py">16.py</a>)</td>
-<td><a href="http://composingprograms.com/pages/27-object-abstraction.html">2.7</a></td>
-<td><a href="disc/disc05.pdf">Discussion 5: Trees and Mutation</a> (<a href="disc/disc05_sol.pdf">Solutions</a>)</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td rowspan="3" class="weeknum odd">7</td>
-<td>Mon 2/29</td>
-<td>Iterators
-<br/>
-(<a href="assets/slides/17_1pp.pdf">1pp</a>) (<a href="assets/slides/17_6pp.pdf">6pp</a>) (<a href="assets/slides/17.py">17.py</a>)</td>
-<td><a href="http://composingprograms.com/pages/29-recursive-objects.html">2.9</a></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Wed 3/2</td>
-<td>Hierarchy
-<br/>
-(<a href="assets/slides/18_1pp.pdf">1pp</a>) (<a href="assets/slides/18_6pp.pdf">6pp</a>) (<a href="assets/slides/18.py">18.py</a>)</td>
-<td><a href="http://composingprograms.com/pages/29-recursive-objects.html">2.9</a></td>
-<td><a href="lab/lab06/">Lab 6: Nonlocal and Object-Oriented Programming</a><br/>(due Fri 3/4)</td>
-<td><a href="hw/hw04/">Homework 4</a><br/>(due Wed 3/9) (<a href="hw/sol-hw04/">Solutions</a>)</td>
-<td>Hog Composition Revision<br/>(due Sun 3/20)</td>
-</tr>
-<tr>
-<td>Fri 3/4</td>
-<td>Growth I
-<br/>
-(<a href="assets/slides/19_1pp.pdf">1pp</a>) (<a href="assets/slides/19_6pp.pdf">6pp</a>) (19.py)</td>
-<td><a href="http://composingprograms.com/pages/28-efficiency.html">2.8</a></td>
-<td><a href="disc/disc06.pdf">Discussion 6: Inheritance and Nonlocal</a> (<a href="disc/disc06_sol.pdf">Solutions</a>)</td>
-<td></td>
-<td><a href="proj/ants/">Ants</a><br/>(due Thu 3/17)</td>
-</tr>
-<tr>
-<td rowspan="3" class="weeknum even">8</td>
-<td>Mon 3/7</td>
-<td>Growth II
-<br/>
-(<a href="assets/slides/20_1pp.pdf">1pp</a>) (<a href="assets/slides/20_6pp.pdf">6pp</a>) (20.py)</td>
-<td><a href="http://composingprograms.com/pages/28-efficiency.html">2.8</a></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Wed 3/9</td>
-<td>Sets
-<br/>
-(<a href="assets/slides/21_1pp.pdf">1pp</a>) (<a href="assets/slides/21_6pp.pdf">6pp</a>) (<a href="assets/slides/21.py">21.py</a>)</td>
-<td><a href="http://composingprograms.com/pages/29-recursive-objects.html">2.9</a></td>
-<td><a href="lab/lab07/">Lab 7: Recursive Objects</a><br/>(due Fri 3/11)</td>
-<td><a href="hw/hw05/">Homework 5</a><br/>(due Mon 3/28)</td>
-<td></td>
-</tr>
-<tr>
-<td>Fri 3/11</td>
-<td>Data Examples
-<br/>
-(<a href="assets/slides/22_1pp.pdf">1pp</a>) (<a href="assets/slides/22_6pp.pdf">6pp</a>) (<a href="assets/slides/22.py">22.py</a>)</td>
-<td></td>
-<td><a href="disc/disc07.pdf">Discussion 7: Orders of Growth</a> (<a href="disc/disc07_sol.pdf">Solutions</a>)</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td rowspan="3" class="weeknum odd">9</td>
-<td>Mon 3/14</td>
-<td>Scheme
-<br/>
-(1pp) (6pp) (23.scm)</td>
-<td><a href="http://composingprograms.com/pages/31-introduction.html">3.1</a><br/>
-<a href="http://composingprograms.com/pages/32-functional-programming.html">3.2</a></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Wed 3/16</td>
-<td>Exceptions
-<br/>
-(1pp) (6pp) (24.py)</td>
-<td><a href="http://composingprograms.com/pages/33-exceptions.html">3.3</a></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Fri 3/18</td>
-<td>Calculator
-<br/>
-(1pp) (6pp) (25.scm)</td>
-<td><a href="http://composingprograms.com/pages/34-interpreters-for-languages-with-combination.html">3.4</a></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td rowspan="3" class="weeknum even">10</td>
-<td>Mon 3/21</td>
-<td>No Lecture: Spring Break</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Wed 3/23</td>
-<td>No Lecture: Spring Break</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Fri 3/25</td>
-<td>No Lecture: Spring Break</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td rowspan="3" class="weeknum odd">11</td>
-<td>Mon 3/28</td>
-<td>Interpreters
-<br/>
-(1pp) (6pp)</td>
-<td><a href="http://composingprograms.com/pages/35-interpreters-for-languages-with-abstraction.html">3.5</a></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Wed 3/30</td>
-<td>Midterm 2</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Fri 4/1</td>
-<td>Tail Calls
-<br/>
-(1pp) (6pp) (27.scm)</td>
-<td><a href="http://composingprograms.com/pages/35-interpreters-for-languages-with-abstraction.html">3.5</a></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td rowspan="3" class="weeknum even">12</td>
-<td>Mon 4/4</td>
-<td>Iterators
-<br/>
-(1pp) (6pp) (28.py)</td>
-<td><a href="http://composingprograms.com/pages/42-implicit-sequences.html">4.2</a></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Wed 4/6</td>
-<td>The Halting Problem
-<br/>
-(1pp) (6pp)</td>
-<td></td>
-<td></td>
-<td></td>
-<td>Scheme<br/>(due Sat 4/23)</td>
-</tr>
-<tr>
-<td>Fri 4/8</td>
-<td>Streams
-<br/>
-(1pp) (6pp) (30.scm)</td>
-<td><a href="http://composingprograms.com/pages/42-implicit-sequences.html">4.2</a></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td rowspan="3" class="weeknum odd">13</td>
-<td>Mon 4/11</td>
-<td>Declarative Programming
-<br/>
-(1pp) (6pp) (31.sql)</td>
-<td><a href="http://composingprograms.com/pages/43-declarative-programming.html">4.3</a></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Wed 4/13</td>
-<td>Tables
-<br/>
-(1pp) (6pp) (32.sql)</td>
-<td><a href="http://composingprograms.com/pages/43-declarative-programming.html">4.3</a></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Fri 4/15</td>
-<td>Recursive Select
-<br/>
-(1pp) (6pp) (33.sql)</td>
-<td><a href="http://composingprograms.com/pages/43-declarative-programming.html">4.3</a></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td rowspan="3" class="weeknum even">14</td>
-<td>Mon 4/18</td>
-<td>Aggregation
-<br/>
-(1pp) (6pp) (34.sql)</td>
-<td><a href="http://composingprograms.com/pages/43-declarative-programming.html">4.3</a></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Wed 4/20</td>
-<td>Distributed Data
-<br/>
-(1pp) (6pp)</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Fri 4/22</td>
-<td>Concurrency
-<br/>
-(1pp) (6pp)</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td rowspan="2" class="weeknum odd">15</td>
-<td>Mon 4/25</td>
-<td>Review
-<br/>
-(1pp) (6pp)</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Wed 4/27</td>
-<td>Conclusion
-<br/>
-(1pp) (6pp)</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td rowspan="1" class="weeknum even">16</td>
-<td>Tue 5/10</td>
-<td>Final</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</table>
-
-  </div>
-
-</div>
-
-
-    </div>
   </body>
   
+<p>For more information on the Data Science Education Program at UC Berkeley, please visit databears.berkeley.edu</p>
 
+<h3>Contact</h3>
+<p>Instructor: Anna Lauren Hoffmann</p>
+<p>Email: annalauren@berkeley.edu</p>
+<p>Office Hours: Tuesdays 2:00-3:30 PM</p>
+<p>Office Hours Location: South Hall 302</p>
 
-<script src="//cdn.jsdelivr.net/algoliasearch/3/algoliasearch.jquery.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.1.1/list.min.js"></script>
-<script>
-$(document).ready(function() {
-  // Resource search
-  var options = {
-    valueNames: ['resource-name', 'resource-type', 'resource-tags']
-  };
-  var resourceList = new List('resources', options);
+<h3>Course Schedule</h3>
+<b>Module 1- Situating "Data" I: What is data?</b>
+<p>Objective: to "shake loose" the idea of data as an object for critical and ethical inquiry</p>
+<u>Reading(s):</u>
+<ul>
+<li>Kitchin,  R.  (2014). Conceptualising Data. In  The data  revolution  (pp.  1-26).  New York: SAGE.</li>
+</ul>
 
-  // Piazza search
-  var client = $.algolia.Client('LHANIWJEIC', '20e552423616d96d3b5bddc3f23360e9');
-  var index = client.initIndex('CS61A Sp16 Piazza'); // Change this depending on semester
-  var piazzaResultLimit = 5;
-  var piazzaCache = {};
+<b>Module 2- Situating "Data" II: A pre-history of data</b>
+<p>Objective: to explore some historical precedents of today's "big data" moment</p>
+<p>Case(s): Censuses & Area Codes</p>
+<u>Reading(s):</u>
+<ul>
+<li>Seltzer,  W., & Anderson, M.  (2001). The dark  side  of  numbers:  The role  of  population  data  
+systems in  human rights  abuses. Social  Research, 68(2),  481-513.</li>
+<li>Garber, M.  (2014,  February  13).  Our numbered  days: The evolution of  the area  code. The
+Atlantic. Retrieved from  http://www.theatlantic.com/technology/archive/2014/02/our-
+numbered-days-the-evolution-of-the-area-code/283803/</li>
+</ul>
 
-  function piazzaSearchCallback(err, content) {
-    if (err || content.hits.length === 0) {
-      return;
-    }
-    // Scan all hits and display them
-    for (var i = 0; i < Math.min(content.hits.length, piazzaResultLimit); ++i) {
+<b>Module 3- Ethical Toolbox I: Research and applied ethics</b>
+<p>Objective: introduce and explore applied ethical frameworks for thinking about data</p>
+<p>Case(s): Facebook’s emotional contagion experiment; OK Cupid match rank testing</p>
+<u>Reading(s):</u>
+<ul>
+<li>The Belmont Report. (1979). The Belmont Report: Ethical principles  and guidelines  for the 
+protection  of  human subjects  of  research. Retrieved from  
+http://www.hhs.gov/ohrp/humansubjects/guidance/belmont.html</li>
+<li>Gray, M.  (2014,  July  9). When  science,  customer  service,  and human subjects  research  collide.  
+Now what? Culture Digitally.  Retrieved from  http://culturedigitally.org/2014/07/when-science-
+customer-service-and-human-subjects-research-collide-now-what/</li>
+</ul>
+<p>Short Writing Assignment #1 due before start of class</p>
 
-      var hit = content.hits[i];
-      if (hit.qid in piazzaCache) {
-        piazzaCache[hit.qid].show();
-        continue;
-      }
+<b>Module 4- Ethical Toolbox II: Concepts of privacy and publicity</b>
+<p>Objective: explore basic concepts  of  privacy and anonymity (access, control, and context)</p>
+<p>Case(s): 2006 AOL search data release; Facebook “Taste, Ties, Time” data release</p>
+<u>Reading(s):</u>
+<ul>
+<li>Tavani, H.  (2012). Privacy and cyberspace. In  Ethics  and technology: Controversies,  questions,  
+and strategies  for ethical computing,  4th Edition (pp.  131-168). Hoboken,  NJ: Wiley.</li>
+<li>Barocas,  S., & Nissenbaum, H.  (2014,  November).  Big data’s  end run around  procedural  privacy 
+protections:  Recognizing the inherent  limitations of  consent and anonymity.  Communications  of  
+the ACM,  57(11), 31-33.</li>
+</ul>
 
+<b>Module 5- Lifecycle of Data I (Part I): Issues in data collection and data mining</b>
+<p>Objective: attend to ethical questions in the collection and mining  of online  data</p>
+<p>Case(s): data mining, social games, consent, Terms of  Service</p>
+<u>Reading(s):</u>
+<ul>
+<li>van Wel,  L., & Royakkers,  L.  (2004). Ethical issues  in  data  mining. Ethics  and Information
+Technology, 6,  129-140.</li>
+<li>Willson,  M., & Leaver, T.  (2015). Zynga’s FarmVille,  social  games,  and the ethics  of  big data  
+mining. Communication and Research  Practice, 1(2), 147-158.</li>
+</ul>
 
-      newPost = resourceList.add({
-          'resource-name': '<a href="' + hit.urlto + '">'
-                           + '@' + hit.qid.toString() + ': ' + hit.subject
-                           + '</a>',
-          'resource-type': 'Piazza post',
-          'resource-tags': hit.tags.join(', ')
-        });
-      newPost[0].show();
-      piazzaCache[hit.qid] = newPost[0];
+<b>Module 6- Lifecycle of Data I (Part II): Issues in data collection and data mining</b>
+<p>Objective: (cont’d from Module 5)</p>
+<p>Case(s): data collection, personal fitness trackers, and the Quantified Self</p>
+<u>Reading(s):</u>
+<ul>
+<li>Crawford, K., Lingel, J., & Karppi, T. (2015).  Our metrics,  ourselves:  A hundred years of  self-
+tracking  from  the weight  scale to  the wrist wearable  device. European  Journal of  Cultural  
+Studies,  18(4-5),  479-496.</li>
+<li>Eveleth,  R.  (2014,  December  15).  How self-tracking apps  exclude women.  The Atlantic.
+Retrieved from  http://www.theatlantic.com/technology/archive/2014/12/how-self-tracking-
+apps-exclude-women/383673/</li>
+<li>Watson, S.M.  (2014,  September 25).  Stepping  down: Rethinking  the fitness tracker.  The 
+Atlantic. Retrieved from  http://www.theatlantic.com/technology/archive/2014/12/how-self-
+tracking-apps-exclude-women/383673/</li>
+</ul>
+<p>Short Writing Assignment #2 due before the start of class</p>
 
+<b>Module 7- Lifecycle of Data II: Issues in data storage and security</b>
+<p>Objective: explore ethical and privacy issues  in  data, information, and computer security</p>
+<p>Case(s): educational data and students’ privacy</p>
+<u>Reading(s):</u>
+<ul>
+<li>Brey, P.  (2007). Ethical aspects of  information security  and privacy.  In  M.  Petković  & W.  Jonker  
+(eds.), Security, privacy,  and trust in  modern  data  management (pp. 21-36). New York: Springer.</li>
+<li>boyd, d.  (2015,  May 22).  Which students  get to  have  privacy?  The Message [Web  log post].  
+Retrieved from  https://medium.com/message/which-students-get-to-have-privacy-
+e9773f9a064#.urtohca12</li>
+</ul>
 
-    }
-  }
+<b>Module 8- Lifecycle of Data III (Part I): Issues in analyzing and exploring data</b>
+<p>Objectives: building on discussions from Module 5, tackling ethical issues in data analysis</p>
+<p>Case(s): “Spurious Correlations,” app design, data inclusion</p>
+<u>Reading(s):</u>
+<ul>
+<li>boyd, d., & Crawford, K.  (2012). Critical  questions for big data. Information,  Communication,  
+and Society,  15(5),  662-679.  (Introduction and Section 1 “Big  Data  changes the definition  of  
+knowledge”)</li>
+<li>Carr, N.  (2014,  April 16).  The limits  of  social  engineering.  MIT Technology  Review. Retrieved 
+from  http://www.technologyreview.com/review/526561/the-limits-of-social-engineering/</li>
+<li>Ananny, M.  (2011,  April 14).  The curious connection  between apps  for gay men and sex 
+offenders.  The Atlantic. Retrieved from  
+http://www.theatlantic.com/technology/archive/2011/04/the-curious-connection-between-
+apps-for-gay-men-and-sex-offenders/237340/</li>
+<li>“Spurious Correlations” http://www.tylervigen.com/spurious-correlations</li>
+</ul>
 
-  function urlExists(url, callback) {
-      // adapted from http://stackoverflow.com/a/1591653
-      var xhr = new XMLHttpRequest();
-      xhr.onreadystatechange = function() {
-          xhr.readyState === 4 && callback(xhr.status < 400);
-      };
-      xhr.open('HEAD', url);
-      xhr.send();
-  }
+<b>Module 9- Lifecycle of Data III (Part II): Issues in analyzing and exploring data</b>
+<p>Objectives: (cont’d from Module 8)</p>
+<p>Case(s): Hurricane Sandy, marginalized populations, data exclusions</p>
+<u>Reading(s):</u>
+<ul>
+<li>Lerman, J.  (2013,  September 3). Big data  and its exclusions. Stanford  Law Review  Online, 66, 55-
+63.</li>
+<li>Crawford, K.  (2013,  April 1). The hidden  biases  in  big data. Harvard Business  Review. Retrieved 
+from  https://hbr.org/2013/04/the-hidden-biases-in-big-data/</li>
+<li>Chalabi,  M.  (2014,  July  29).  Why we  don’t know  the size  of  the transgender population. 
+FiveThirtyEight.  Retrieved from  http://fivethirtyeight.com/features/why-we-dont-know-the-
+size-of-the-transgender-population/</li>
+</ul>
+<p>Final Essay Proposals due before the start of class</p>
 
-  // Assignment quick list
-  var assignments = [{"due": "1/22/16", "link": "lab/lab00/", "name": "Lab 0: Workflow", "release": "1/20/16"}, {"due": "1/29/16", "link": "lab/lab01/", "name": "Lab 1: Expressions and Control", "release": "1/27/16"}, {"due": "2/5/16", "link": "lab/lab02/", "name": "Lab 2: Higher Order Functions, Recursion and Lambdas", "release": "2/3/16"}, {"due": "2/12/16", "link": "lab/lab03/", "name": "Lab 3: Data Abstraction and Recursion/Lambdas Review", "release": "2/10/16"}, {"due": "2/22/16", "link": "lab/lab04/", "name": "Lab 4: Lists and Linked Lists", "release": "2/17/16"}, {"due": "2/26/16", "link": "lab/lab05/", "name": "Lab 5: Mutable Lists, Dictionaries and Trees", "release": "2/24/16"}, {"due": "3/4/16", "link": "lab/lab06/", "name": "Lab 6: Nonlocal and Object-Oriented Programming", "release": "3/2/16"}, {"due": "3/11/16", "link": "lab/lab07/", "name": "Lab 7: Recursive Objects", "release": "3/9/16"}, {"due": "1/27/16", "link": "hw/hw01/", "name": "Homework 1", "release": "1/22/16"}, {"due": "2/16/16", "link": "hw/hw02/", "name": "Homework 2", "release": "2/8/16"}, {"due": "2/26/16", "link": "hw/hw03/", "name": "Homework 3", "release": "2/19/16"}, {"due": "3/9/16", "link": "hw/hw04/", "name": "Homework 4", "release": "3/2/16"}, {"due": "3/28/16", "link": "hw/hw05/", "name": "Homework 5", "release": "3/9/16"}, {"due": "2/4/16", "link": "proj/hog/", "name": "Hog", "release": "1/27/16"}, {"due": "2/15/16", "link": "proj/hog_contest/", "name": "Hog Contest", "release": "2/3/16"}, {"due": "3/1/16", "link": "proj/maps/", "name": "Maps", "release": "2/19/16"}, {"due": "3/20/16", "link": null, "name": "Hog Composition Revision", "release": "3/2/16"}, {"due": "3/17/16", "link": "proj/ants/", "name": "Ants", "release": "3/4/16"}, {"due": "4/23/16", "link": "proj/scheme/", "name": "Scheme", "release": "4/6/16"}];
+<p><b>SPRING BREAK</b></p>
 
-  $(document).ready(function() {
-    $("#resources-search-box").keyup(function() {
-      if (!this.value) {
-        $('#resources-display').hide();
-      } else {
-        index.search($("#resources-search-box").val(), piazzaSearchCallback);
-        $('#resources-display').show();
-      }
-    });
+<b>Module 10- Lifecycle of Data IV (Part I): Ethics of algorithms and automated systems</b>
+<p>Objectives: building on Modules 8/9, examining consequences of automation and 
+implementation</p>
+<p>Case(s): algorithmic cruelty, data and discrimination</p>
+<u>Reading(s):</u>
+<ul>
+<li>Gillespie,  T.  (2012). Can an  algorithm be  wrong?  Limn, 2,  n.p.  Retrieved from  
+http://escholarship.org/uc/item/0jk9k4hj</li>
+<li>Slavin, K.  (2011). How algorithms  shape our world [video].  TEDGlobal 2011. Retrieved from
+http://www.ted.com/talks/kevin_slavin_how_algorithms_shape_our_world</li>
+<li>Wolf, C., & Polonetsky, Jules.  (2014,  November  5). Big data: Putting the heat  on  hate. Re/code.  
+Retrieved from  http://recode.net/2014/11/05/big-data-putting-heat-on-the-hate/</li>
+<li>Meyer,  E. (2014, December  24).  Inadvertent algorithmic cruelty.  MeyerWeb.com. Retrieved 
+from  http://meyerweb.com/eric/thoughts/2014/12/24/inadvertent-algorithmic-cruelty/</li>
+</ul>
 
-    var currentTime = Date.now();
-    var quickListCount = 0;
-    assignments.forEach(function(assignment) {
-      var due = new Date(assignment.due);
-      due.setDate(due.getDate() + 1);
-      if (currentTime <= due) {
-        urlExists(assignment.link, function(exists) {
-          if (!exists) return;
-        if (quickListCount % 4 === 0) {
-          $('#assignment-quick-list').append('<div class="row"></div>');
-          quickListCount++;
-        }
-        $('#assignment-quick-list > div').last().append(
-            '<div class="col-xs-6 col-md-3">'
-            + '<div class="quick-list-item">'
-            + '<a href="' + assignment.link + '"><span class="quick-list-item-link"></span></a>'
-            + assignment.name
-            + '<hr/>Due '
-            + assignment.due
-            + '</div></div>');
-        });
-      }
-    });
-  });
+<b>Module 11- Lifecycle of Data IV (Part II): Ethics of algorithms and automated systems</b>
+<p>Objectives: (cont’d from  Module 10)</p>
+<p>Case(s): Google search, redlining, race, and gender</p>
+<u>Reading(s):</u>
+<ul>
+<li>Noble,  S.U.  (2012,  Spring).  Missed  connections:  What  search  engines say about women.  Bitch 
+Magazine, 54, 37-41.  Retrieved from  
+https://safiyaunoble.files.wordpress.com/2012/03/54_search_engines.pdf</li>
+<li>Barr, A.  (2015,  July  1). Google  mistakenly  tags  black people  as  ‘gorillas,’ showing limits  of  
+algorithms. WSJ Bits  Blog. Retrieved from  http://blogs.wsj.com/digits/2015/07/01/google-
+mistakenly-tags-black-people-as-gorillas-showing-limits-of-algorithms/</li>
+<li>Mock, B.  (2015,  September 28).  Redlining is  alive and well—and  evolving. CityLab.  Retrieved 
+from  http://www.citylab.com/housing/2015/09/redlining-is-alive-and-welland-
+evolving/407497/</li>
+</ul>
 
-  // Announcements
-  var announcementIndex = 0;
+<b>Module 12- Lifecycle of Data V: Issues in dissemination and evaluation of data</b>
+<p>Objectives: Trace ethical challenges in the evaluation and communication of results</p>
+<p>Case(s): Google Flu trends, United  Nation  Waste Crimes report</p>
+<u>Reading(s):</u>
+<ul>
+<li>Harris, J.  (2014,  May 22).  Distrust  your  data. Source.opennews.org.  Retrieved from  
+https://source.opennews.org/en-US/learning/distrust-your-data/</li>
+<li>Madrigal, A.C.  (2015,  October 6). The deception that  lurks in  our data-driven world.  Fusion. 
+Retrieved from  http://fusion.net/story/202230/true-data-can-lie/</li>
+<li>Lepawsky, J., Goldstein,  J., & Schulz, Y.  (2015,  June  24).  Criminal  negligence? Discard studies:  
+Social  studies of  waste,  pollution,  & externalities.  Retrieved from  
+http://discardstudies.com/2015/06/24/criminal-negligence/</li>
+<li>Lazer,  D., & Kennedy,  R.  (2015,  October 1). What  we  can learn from  the epic  failure of  Google  
+flu trends. Wired.  Retrieved from  http://www.wired.com/2015/10/can-learn-epic-failure-
+google-flu-trends/</li>
+</ul>
 
-  function setAnnouncements(offset) {
-    var newIndex = announcementIndex  + offset;
-    var announcementNumber = $('.announcement').length;
+<b>Module 13- Interrogating Data Science: Asking critical and ethical questions</b>
+<p>Objectives: strategies for thinking pragmatically about ethics as an info professional</p>
+<p>Student-generated session – readings to be chosen and lecture to be led by student groups, facilitated by instructor</p>
 
-    if (newIndex < 0 || newIndex >= announcementNumber) {
-      return;
-    }
+<b>Module 14- Data Futures: Thinking ethically, thinking ahead</b>
+<p>Objectives: identify and explore ethical issues on data science’s horizons</p>
+<p>Student-generated session – readings to be chosen and lecture to be led by student groups, 
+facilitated by instructor</p>
 
-    $('#announcement-' + announcementIndex).hide(0, function() {
-      $('#announcement-' + newIndex).show(0);
-    });
+<b>Module 15- Course Reflection: Revisiting our Data Doubles</b>
+<p>Final Essay Projects due</p>
 
-    announcementIndex = newIndex;
+<h3>Assignments:</h3>
+<p>Course	assignments	revolve	around short,	accessible	styles	of	writing.	Emphasis	is	placed	not	on
+writing	for	academics,	but	in	writing	for	the	broad	potential	audiences	a	data	scientists	or	
+information	professional	might	have	the	opportunity	to	engage—for	example,	co-workers,	
+clients,	or	the	general	public.	Assignments	include	both	reflective	writing	(to	get	students	
+thinking	through	their	own	ethical	commitments	and	practices)	and	compelling	argumentation	
+(as	in	the	form	of	a	critical	or	persuasive	blog post	or	newspaper	op-ed).</p>
+<ul>
+  <li>Short	Writing	Assignment	#1 – Sketching	Your	Data	Double:	In	this	brief	personal	essay	(300
+  //banana words
+words),	students	will	identify	a	data-intensive	online	service	they	regularly	use	(i.e.,	
+Facebook,	Google,	reddit,	etc...)	and	describe	how	the	site	“sees”	them,	that	is,	students	
+should	offer	a	description	of	who	or	what	the	site	“thinks”	they	are	like.</li>
+<li>Short	Writing	Assignment	#2 - Values	Exploration:	In	this	brief	writing	assignment	(400-500	
+words),	students	will	choose	one of	the	three	values	identified	in	the	Belmont	Report	
+(respect,	beneficence,	or	justice)	and	1)	describe	how	it	is	defined	in	the	Report,	2)	conduct	
+light	research	to	identify	a	different	or	alternative	definition	of	the	value,	and	3)	reflect	on	
+what	it	might	mean	to	heed	this	value	in	the	context	of	data	science.</li>
+<li>Group	Project – Student-Generated	Session:	Recognizing	the	value	of	diverse	inputs	and	
+community	engagement,	students	will	be	split	into	four	groups	and	tasked	with	developing	
+(with	assistance	from	the	instructor)	content	for	one	Module of	the	course.	These	student-
+generated	sessions	will	span	two	sessions,	with	individual	groups	being	responsible	for	the	
+content	(i.e.,	selected	reading,	reading	notes,	and	short	presentation)	for	half	of	one	
+session. Though	students	will	have	relatively	broad	license,	they	will	be	required	to	work	
+towards	the	pedagogical	aims	and	content	themes	of	the	Module (see	Modules	13	and	14	
+below).</li>
+<li>Final	Essay	Proposal:	Students	will	sketch	a	brief	idea	(300	word	max)	for	their	final	essay	
+topic	(see	below).	This	proposal	process	will	give	the	students	an	opportunity	to	think	about	
+their	final	project	in	advance	and	allow	the	instructor	to	give	them	constructive	feedback	
+early	on.</li>
+<li>Final	Essay	Project:	Students	(either	alone	or	in	pairs) will	write	an	extended	essay	(1200	
+words)	on	the	topic	of	their	choosing	(so	long	as	the	topic	relates	to	ethics	and	data,	broadly	
+construed).	The	essays	should	take	the	form	of	1)	a	blog	post,	of	the	sort	that	might	be	
+circulated	online	or	on	an	internal company	blog	or	2)	op-ed	commentary	for	a	newspaper	
+or	online	publication.	Students	should	have	a	clear	idea	of	their	intended	audience,	and	will	
+receive	guidance	on	how	to	write	persuasively	in	that	direction.	Overall,	the	assignment	is	
+intended	to	help	students	learn	to	communicate	ethical	ideas	and	critical	issues	outside	of	
+the	classroom.</li>
+</ul>  
 
-    if (announcementIndex >= announcementNumber - 1) {
-      $('#announcement-' + announcementIndex + ' .announcement-btn-older')
-        .addClass('disabled');
-    }
-    if (announcementIndex === 0) {
-      $('#announcement-' + announcementIndex + ' .announcement-btn-newer')
-        .addClass('disabled');
-    }
-  }
-  setAnnouncements(0);
+<h3>Academic Integrity</h3>
+<p>The	high	academic	standard	at	the	University	of	California,	Berkeley,	is	reflected	in	each	degree	
+that	is	awarded.	As	a	result,	every	student	is	expected	to	maintain	this	high	standard	by	
+ensuring	that	all	academic	work	reflects	unique	ideas	or	properly	attributes	the	ideas	to	the	
+original	sources.	Individual	departments	often	have	their	own	ways	of	citing	and	attributing	
+work,	so	it	is	the	responsibility	of	each	student	to	seek	that	information	out	if	it	is	not	otherwise	
+provided	through	a	syllabus,	course	website,	or	other	means.</p>
+<p>These	are	some	basic	expectations	of	students with	regards	to	academic	integrity:</p>
+<ul>
+  <li>Any	work	submitted	should	be	your	own	individual	thoughts,	and	should	not	have	been
+submitted	for	credit	in	another	course	unless	you	have	prior	written permission	to	re-
+use	it	in	this	course	from	this	instructor.</li>
+<li>All	assignments	must	use	"proper	attribution," meaning	that	you	have	identified	the
+original	source	and	extent	or	words	or	ideas	that	you	reproduce	or	use	in	your	
+assignment.	This	includes	drafts	and	homework	assignments!</li>
+<li>If	you	are	unclear	about	expectations,	ask	your	instructor	or	GSI.</li>
+</ul>
+<p>Do	not	collaborate	or	work	with	other	students	on	assignments	or	projects	unless	you	have	
+been	given	permission	or	instruction	to	do	so. For	more	information	visit:	
+http://sa.berkeley.edu/conduct/integrity</p>
 
-  $('.announcement-btn-newer > a').click(function() {
-    setAnnouncements(-1);
-  });
-  $('.announcement-btn-older > a').click(function() {
-    setAnnouncements(1);
-  });
-});
-</script>
+<h3>UC Berkeley Statement on Diversity</h3>
+<p>These	principles	of	community	for	the	University	of	California,	Berkeley are	rooted	in	a	mission	
+of	teaching,	research	and	public	service	and	will	be	enforced	in	our	classroom	this	term.</p>
+<ul>
+  <li>We	place	honesty	and	integrity	in	our	teaching,	learning,	research	and	administration	at
+the	highest	level.</li>
+<li>We	recognize	the	intrinsic	relationship	between	diversity	and	excellence	in	all	our
+endeavors.</li>
+<li>We	affirm	the	dignity	of	all	individuals	and	strive	to	uphold	a	just	community	in	which
+discrimination	and	hate	are	not	tolerated.</li>
+<li>We	are	committed	to	ensuring	freedom	of	expression	and	dialogue	that	elicits	the	full
+spectrum	of	views	held	by	our	varied	communities.</li>
+<li>We	respect	the	differences	as	well	as	the	commonalities	that	bring	us	together	and	call
+for	civility	and	respect	in	our	personal	interactions.</li>
+<li>We	believe	that	active	participation	and	leadership	in	addressing	the	most	pressing
+issues	facing	our	local	and	global	communities	are	central	to	our	educational	mission.</li>
+<li>We	embrace	open	and	equitable	access	to	opportunities	for	learning	and	development
+as	our	obligation	and	goal.</li>
+</ul>
+<p>For	more	information,	visit	UC	Berkeley's	Division	of	Equity,	Inclusion	&	Diversity page:	
+http://diversity.berkeley.edu/vcei</p>
 
+<h3>Learning Accomodations and Access</h3>
+<p>If	you	need	accommodations	for	any	physical,	psychological,	or	learning	disability,	please	speak	
+to	me	after	class	or	during	office	hours.</p>
+
+<h3>Additional Campus Resources</h3>
+<p>These	additional	campus	units	may,	at	times,	prove	helpful	during	the	course	of	the	semester:</p>
+<ul>
+  <li>Student Learning Center</li>
+  <li>Counseling & Psychological Services</li>
+  <li>University Health Services</li>
+  <li>Disabled Students' Program</li>
+  <li>Gender Equity Resource Center</li>
+  <li>Berkeley International Office</li>
+</ul>
 
 </html>
